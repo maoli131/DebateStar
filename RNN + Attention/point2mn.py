@@ -18,7 +18,7 @@ def get_main_points(fid, main_points):
     against_points = ast.literal_eval(against_points)
     return for_points, against_points
 
-    punctuations = string.punctuation
+punctuations = string.punctuation
 def tokenize_point(point):
     """
     Returns a list of lowercased tokens, without punctuations
@@ -64,7 +64,6 @@ def matching_vector(attention_vec, word, embedding_index):
     return matching_vec
 
 def point2mn(point, title, embedding_index):
-    #point_vecs = point2gloves(point, embedding_index)
     words = tokenize_point(point)
     title_vecs = point2gloves(title, embedding_index)
     nn_inputs = []
